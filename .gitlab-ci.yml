@@ -1,0 +1,19 @@
+stages:
+  - setup
+  - build
+  - test
+
+setup:
+  stage: setup
+  script:
+    - pip install -r requirements.txt
+
+build:
+  stage: build
+  script:
+    - python hello_world.py
+
+test:
+  stage: test
+  script:
+    - echo "No tests defined."
